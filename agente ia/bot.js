@@ -1,8 +1,8 @@
 const puppeteer = require('puppeteer');
 
 const instagram = {
-  username: 'fragancia_y_exito',
-  password: '*k9ñ;p6Y@'
+  username: 'ku3ntaf4ke',
+  password: '3311546193'
 };
 
 const randomDelay = (min, max) => new Promise(resolve => 
@@ -10,7 +10,7 @@ const randomDelay = (min, max) => new Promise(resolve =>
 
 (async () => {
   const browser = await puppeteer.launch({
-    headless: false,
+    headless: true,
     executablePath: "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
     args: [
       '--start-maximized',
