@@ -10,7 +10,7 @@ const randomDelay = (min, max) => new Promise(resolve =>
 
 (async () => {
   const browser = await puppeteer.launch({
-    headless: true,
+    headless: false,
     executablePath: "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
     args: [
       '--start-maximized',
@@ -85,7 +85,7 @@ const randomDelay = (min, max) => new Promise(resolve =>
     await randomDelay(5000, 8000);
 
     // 4. Click en bandeja de mensajes (después de redirección)
-    console.log('📨 Accediendo a mensajes...');
+    console.log('accediendo a mensajes');
     const messagesButton = '#mount_0_0_6c > div > div:nth-child(1) > div > div.x9f619.x1n2onr6.x1ja2u2z > div > div > div.x78zum5.xdt5ytf.x10cihs4.x1t2pt76.x1n2onr6.x1ja2u2z > span > div > div > div:nth-child(3) > div > div > div.xrbpyxo.x5yr21d.x1y5idc5 > div > div > div.x1iyjqo2.xs83m0k.x6ikm8r.x10wlt62 > div > div.x78zum5.xdt5ytf.x1iyjqo2.x1n2onr6 > nav > ul > div > div:nth-child(3) > div > li > div > div > a';
     
     // Esperar a que el dashboard esté completamente cargado
@@ -107,7 +107,7 @@ const randomDelay = (min, max) => new Promise(resolve =>
       delay: 150 + Math.random() * 150,
       button: 'left'
     });
-    console.log('✅ Bandeja de mensajes abierta');
+    console.log('Bandeja de mensajes abierta');
     await randomDelay(5000, 8000);
 
     console.log('🎉 Flujo completado con éxito');
